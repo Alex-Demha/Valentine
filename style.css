@@ -154,9 +154,12 @@ form {
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index: 100;
+}
+.signature a {
+  text-decoration: none;
   color: white;
   font-family: sans-serif;
-  z-index: 100;
 }
 
 .success {
