@@ -18,7 +18,7 @@ html{
   transform: translate(-50%, -50%) rotate(0deg) scale(1) !important;
 }
 form{
-  transition: all .4s ease;
+  transition: all .6s ease;
   position: fixed;
   padding: 0;
   top: 0px;
@@ -36,7 +36,7 @@ form{
 }
 @media (max-width: 950px){
   form{
-    width: 1200px;
+    width: 1000px;
   }
 }
 @keyframes glow {
@@ -82,8 +82,9 @@ form{
 }
 .screen-success{
   display: flex;
+  opacity: 0;
   transform: scale(0);
-  transition: transform .3s .35s ease;
+  transition: transform .6s .8s ease, opacity .8s .9s ease;
   justify-content: center;
   flex-direction: column;
   align-items: center;

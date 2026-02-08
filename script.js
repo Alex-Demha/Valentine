@@ -7,7 +7,7 @@ form.addEventListener('submit', function(e){
   let input = document.getElementById("input").value
   if(input.toLowerCase() === "fatima" || input === "فاطمة" || input === "فاطمه" || input.toLowerCase() === "fatma")
   {
-    screenS.setAttribute('style','transform: scale(1); ');
+    screenS.setAttribute('style','transform: scale(1); opacity: 1;');
     screenF.style.display = "none";
     form.setAttribute('style', 'transform: translateX(-50%) scale(0); border-radius: 100%;')
   }
