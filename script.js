@@ -4,7 +4,7 @@ let form = document.getElementById("form");
 
 form.addEventListener('submit', function(e){
   e.preventDefault();
-  let input = document.getElementById("input").value
+  let input = document.getElementById("input").value.trim();
   if(input.toLowerCase() === "fatima" || input === "فاطمة" || input === "فاطمه" || input.toLowerCase() === "fatma")
   {
     screenS.setAttribute('style','transform: scale(1); opacity: 1;');
