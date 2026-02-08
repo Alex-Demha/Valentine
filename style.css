@@ -35,6 +35,24 @@ form {
   justify-content: center;
   align-items: center;
   background-color: #eee;
+  input{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: #eee;
+    padding: 4px 10px;
+    margin: 4px;
+    box-shadow: 0 0 1px black;
+  }
+  button{
+    padding: 4px 10px; 
+    margin: 4px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: #ccc;
+    box-shadow: 0 0 1px #111;
+  }
 }
 
 @media (max-width: 950px) {
