@@ -1,0 +1,180 @@
+html{
+  overflow: hidden;
+  background-color: #070738;
+}
+#image{
+  position: absolute;
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(1000deg) scale(0);
+  transform-origin: center;
+  transition: all .8s ease-out;
+}
+.img-active{
+  transform: translate(-50%, -50%) rotate(0deg) scale(1) !important;
+}
+form{
+  transition: all .4s ease;
+  position: fixed;
+  padding: 0;
+  top: 0px;
+  left: 50%;
+  margin: 0;
+  //border-radius: 100%;
+  height: 100vh;
+  width: 100vw;
+  transform: translateX(-50%) scale(1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+@media (max-width: 950px){
+  form{
+    width: 1200px;
+  }
+}
+@keyframes glow {
+    /* 'from' is 0% and 'to' is 100% of the animation */
+    from {
+        /* Multiple text shadows are stacked to create a soft, wide glow */
+        text-shadow: 0 0 10px #fff1, 
+                     0 0 20px pink
+    }
+    to {
+        /* The glow effect intensifies and spreads out at the peak of the animation */
+        text-shadow: 0 0 30px #ff4da6, 
+                     0 0 40px #ff4da6, 
+                     0 0 50px #ff4da6, 
+                     0 0 60px #ff4da6
+    }
+}
+.screen-2{
+  display: none;
+  //border: 2px solid green;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #070738;
+}
+.screen-ahmed{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 4em;
+    font-family: sans-serif;
+}
+.screen-fail{
+  display: none;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+}
+.screen-success{
+  display: flex;
+  transform: scale(0);
+  transition: transform .3s .35s ease;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: sans-serif;
+  header{
+    padding: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: pink;
+    font-weight: bold;
+    font-family: sans-serif;
+    animation: glow ease-in-out 1.4s infinite alternate;
+    }
+  .button-set{
+      button{
+        outline: none;
+        border: none;
+        padding: 6px 12px;
+        &:hover{
+          cursor: pointer;
+          filter: brightness(80%);
+        }
+    }
+    
+    #yes{
+      background-color: green;
+      color: white;
+    }
+
+    #no{
+      background-color: darkred;
+      color: white;
+    }
+  }
+}  
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red; /* Choose your heart color */
+  transform: rotate(-45deg); /* Rotates the main div to create the bottom point */
+}
+
+/* Create the top-left circle */
+.heart::before {
+  content: "";
+  top: -50px; /* Half of the height to position it correctly */
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* Create the top-right circle */
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px; /* Half of the width to position it correctly */
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.signature{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-family: sans-serif;
+  z-index: 100;
+}
+
+.success{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: #070738;
+    font-family: sans-serif;
+    font-size: 2em;
+    color: white;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    //border: 2px solid green;
+}
